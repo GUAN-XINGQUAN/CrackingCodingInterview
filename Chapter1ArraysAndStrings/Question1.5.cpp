@@ -12,9 +12,42 @@
 
 using namespace std;
 
-
-// Solution 1: non-optimized code structure
+// Optimized solution
 bool isOneAway(string str1, string str2)
+{
+    int m = str1.size(), n = str2.size();
+    // Trival case: two lengths differ by more than one --> false
+    if (abs(m - n) >= 2)
+        return false;
+    // This is to ensure that str1 is always the longer one
+    if (m < n)
+        return isOneAway(str2, str1);
+    // Save char->count pair for str1
+    unordered_map<char, int> char2Freq;
+    for (int i = 0; i < str1.size(); i++)
+        char2Freq[str1[i]]++;
+    // Remove the char-count pair if same char occurs in str2
+    for (int j = 0; j < str2.size(); j++)
+    {
+        if (char2Freq.count(str2[j]) != 0)
+            char2Freq[str2[j]]--;
+    }
+    // Count how many char's count is nonzero
+    unordered_map<char, int>::iterator it = char2Freq.begin();
+    int ct = 0;
+    while (it != char2Freq.end())
+    {
+        if (it->second != 0)
+            ct++;
+        it++;
+    }
+    return ct <= 1;
+}
+
+
+
+// Naive Solution 1: non-optimized code structure
+bool isOneAway1(string str1, string str2)
 {
     int m = str1.size(), n = str2.size();
     // Case 1: two strings' length differ by more than 1 character --> false
@@ -80,5 +113,6 @@ int main()
     assert(isOneAway("pale", "pl") == false);
     assert(isOneAway("guan", "g") == false);
     assert(isOneAway("guan", "ga") == false);
+    assert(isOneAway("guan", "guan") == true);
     cout << "All test cases passed\n";
 }
