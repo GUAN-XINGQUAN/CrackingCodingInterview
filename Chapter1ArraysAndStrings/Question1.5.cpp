@@ -1,3 +1,26 @@
+/*
+Implement an algorithm that determines if the 2nd string can be formed from the 1st string by using (1) removing a character; (2) inserting a new character; (3) replace an existing character;
+
+Example 1:
+    Input:
+        str1 = "GUAN"; str2 = "GGAN"
+    Return:
+        true
+
+Example 2:
+    Input:
+        str1 = "Guan"; str2 = "uan"
+    Return:
+        true
+
+Example 3:
+    Input:
+        str1 = "GuAN"; str2 = "AN"
+    Return:
+        false
+*/
+
+
 #include<iostream>
 #include<vector>
 #include<cassert>

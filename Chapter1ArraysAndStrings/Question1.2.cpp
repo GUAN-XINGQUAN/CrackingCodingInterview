@@ -1,3 +1,18 @@
+/*
+Implement an algorithm to determine if the 2nd string is a permutation of the 1st string.
+
+Example 1:
+	Input:
+		str1 = "GUAN"; str2 = "UGAN"
+	Return = true
+
+Example 2:
+	Input:
+		str1 = "gG"; str2 = "xz"
+	Return = false
+*/
+
+
 #include<iostream>
 #include<vector>
 #include<cassert>

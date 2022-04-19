@@ -1,3 +1,16 @@
+/*
+Devise an algorithm that replace all blanks in the string with %20. 
+The string has sufficient blanks at the end.
+
+Example 1:
+	Input: "GUAN    "
+	Return: "GAUN    "
+
+Example 2:
+	Input: "G UAN    "
+	Return: "G%20UAN  "
+*/
+
 #include<iostream>
 #include<vector>
 #include<cassert>
