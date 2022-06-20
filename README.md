@@ -4,4 +4,4 @@ Progress:
 
 Chapter 1: Complete
 
-Chapter 2: In progress
+Chapter 2: **In progress**
