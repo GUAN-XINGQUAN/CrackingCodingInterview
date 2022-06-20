@@ -3,4 +3,5 @@ My solutions to the book [Cracking the Coding Interview](https://www.amazon.com/
 Progress:
 
 Chapter 1: Complete
+
 Chapter 2: In progress
